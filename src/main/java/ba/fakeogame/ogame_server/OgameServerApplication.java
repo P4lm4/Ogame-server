@@ -23,11 +23,12 @@ import pak.ShipIndex;
 @SpringBootApplication
 public class OgameServerApplication {
 
+
 	public static void main(String[] args) {
 		SpringApplication.run(OgameServerApplication.class, args);
 	}
 	
-	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@CrossOrigin
 	@GetMapping("/register")
 	public String register(String username, String password)
 	{
@@ -55,7 +56,7 @@ public class OgameServerApplication {
 		
 	}
 	
-	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@CrossOrigin
 	@GetMapping("/login")
 	public String login(String username, String password)
 	{
@@ -102,7 +103,7 @@ public class OgameServerApplication {
 		
 	}
 	
-	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@CrossOrigin
 	@GetMapping("/signOut")
 	public String signOut(String token)
 	{
@@ -129,7 +130,7 @@ public class OgameServerApplication {
 	}
 	
 	
-	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@CrossOrigin
 	@GetMapping("/resource")
 	public String resource(String token, int idPlanet)
 	{
@@ -161,7 +162,7 @@ public class OgameServerApplication {
 		
 	}
 	
-	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@CrossOrigin
 	@GetMapping("/planets")
 	public String planets(String token)
 	{
@@ -198,7 +199,7 @@ public class OgameServerApplication {
 		}
 	}
 	
-	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@CrossOrigin
 	@GetMapping("/updateBuilding")
 	public String updateBuilding(String token, int idPlanet, String idBuilding)
 	{
@@ -241,7 +242,7 @@ public class OgameServerApplication {
 		
 	}
 	
-	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@CrossOrigin
 	@GetMapping("/buildShip")
 	public String updateShip(String token, int idPlanet, String idShip, int count)
 	{
@@ -283,7 +284,7 @@ public class OgameServerApplication {
 		}
 	}
 	
-	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@CrossOrigin
 	@GetMapping("/updateBuildingInfo")
 	public String updateBuildingInfo(String token, int idPlanet)
 	{
@@ -325,7 +326,7 @@ public class OgameServerApplication {
 		
 	}
 	
-	@CrossOrigin(origins = "http://127.0.0.1:5500")
+	@CrossOrigin
 	@GetMapping("/buildShipInfo")
 	public String buildShipInfo(String token, int idPlanet)
 	{
